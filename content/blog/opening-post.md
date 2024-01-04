@@ -1,6 +1,6 @@
 +++
 title = "Opening post"
-description = "First post on my personal blog, describing why I created this blog and what to expect next."
+description = "First post on my personal blog, describing why and how I created this blog and what to expect next."
 date = 2024-01-03
 
 [taxonomies]

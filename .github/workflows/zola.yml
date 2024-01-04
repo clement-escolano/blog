@@ -46,6 +46,11 @@ jobs:
           if [[ -s $(git status -s -- static/custom_subset.css) ]]; then exit 0; fi
           git add static/custom_subset.css
           git -c user.name="${{ github.actor }}" -c user.email="${{ github.actor }}@users.noreply.github.com" commit -m "Update custom font subset"
+      - name: Change the updated field if necessary
+        run: |
+          code/updated_field.sh
+          if git diff --cached --quiet; then exit 0; fi
+          git -c user.name="${{ github.actor }}" -c user.email="${{ github.actor }}@users.noreply.github.com" commit -m "Change updated field when needed"
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
