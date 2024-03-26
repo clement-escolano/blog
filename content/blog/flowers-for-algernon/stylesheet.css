@@ -1,0 +1,44 @@
+.book h3 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.book .upper {
+    font-variant: small-caps;
+}
+
+.book .space {
+    margin-top: 1rem;
+}
+
+.book p {
+    text-indent: 2rem;
+    margin: 0;
+    text-align: justify;
+}
+
+.book h3 + p {
+    text-indent: 0;
+}
+
+.book p.noindent {
+    text-indent: 0;
+}
+
+.book p.new {
+    text-indent: 0;
+    margin-top: 1rem;
+}
+
+.book .right {
+    text-align: right;
+}
+
+.book .date {
+    font-style: italic;
+    margin-right: 0.5rem;
+}
+
+.book .letter {
+    padding-left: 2rem;
+}
