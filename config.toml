@@ -5,8 +5,8 @@ title = "~/Clément Escolano"
 description = "Latest blog posts from Clément Escolano, French developer."
 theme = "tabi"
 minify_html = true
-generate_feed = true
-feed_filename = "rss.xml"
+generate_feeds = true
+feed_filenames = ["atom.xml", "rss.xml"]
 author = "Clément Escolano"
 taxonomies = [{name = "tags", feed = true}]
 
@@ -17,6 +17,7 @@ external_links_target_blank = true
 external_links_no_referrer = true
 smart_punctuation = true
 lazy_async_image = true
+bottom_footnotes = true
 
 [extra]
 theme_switcher = true
@@ -30,7 +31,6 @@ menu = [
     { name = "tags", url = "tags", trailing_slash = true },
 ]
 quick_navigation_buttons = true
-footnote_backlinks = true
 copy_button = true
 custom_subset = true
 feed_icon = true
