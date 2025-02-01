@@ -38,19 +38,6 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-      - name: Configure custom font subset if header has changed
-        run: |
-          if ! git diff --name-only ${{ github.event.before }} ${{ github.event.after }} | grep -w -q config.toml; then exit 0; fi
-          pip install fonttools brotli
-          code/subset_font.sh -c config.toml -f themes/tabi/static/fonts/Inter4.woff2 -o static/
-          if [[ -s $(git status -s -- static/custom_subset.css) ]]; then exit 0; fi
-          git add static/custom_subset.css
-          git -c user.name="${{ github.actor }}" -c user.email="${{ github.actor }}@users.noreply.github.com" commit -m "Update custom font subset"
-      - name: Change the updated field if necessary
-        run: |
-          code/updated_field.sh
-          if git diff --cached --quiet; then exit 0; fi
-          git -c user.name="${{ github.actor }}" -c user.email="${{ github.actor }}@users.noreply.github.com" commit -m "Change updated field when needed"
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
@@ -60,10 +47,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
-      - name: Push the changes to the repository
-        run: |
-          if [ $(git rev-list --count @{u}..HEAD) -eq 0 ]; then exit 0; fi
-          git push https://x-access-token:${{ github.token }}@github.com/$GITHUB_REPOSITORY.git
 
   deploy:
     environment:

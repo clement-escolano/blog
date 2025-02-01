@@ -1,5 +1,5 @@
 base_url = "https://clement.escolano.fr"
-compile_sass = false
+compile_sass = true
 build_search_index = false
 title = "~/Clément Escolano"
 description = "Latest blog posts from Clément Escolano, French developer."
@@ -31,8 +31,8 @@ menu = [
     { name = "tags", url = "tags", trailing_slash = true },
 ]
 quick_navigation_buttons = true
-copy_button = true
-custom_subset = true
+enable_subset = false
+copy_button = false
 feed_icon = true
 show_reading_time = true
 email = "clement.escolano@icloud.com"
@@ -44,6 +44,9 @@ footer_menu = [
     {url = "privacy", name = "privacy", trailing_slash = true},
     {url = "sitemap.xml", name = "sitemap", trailing_slash = false},
 ]
+stylesheets = ["extra.css"]
+toc = true
+invert_title_order = true
 
 [extra.analytics]
 service = "plausible"

@@ -1,0 +1,15 @@
+// https://stackoverflow.com/questions/1530685/how-can-i-keep-consistent-line-height-with-superscript-elements
+sup {
+    line-height: 0;
+}
+
+.credits {
+    display: none;
+}
+
+// Override fonts to use only default font and not load external files
+:root {
+    --serif-font: 'Georgia', serif;
+    --sans-serif-font: Helvetica, Arial, sans-serif;
+    --code-font: Menlo, Monaco, Consolas, monospace,
+}
