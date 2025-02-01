@@ -13,3 +13,21 @@ sup {
     --sans-serif-font: Helvetica, Arial, sans-serif;
     --code-font: Menlo, Monaco, Consolas, monospace,
 }
+
+figure {
+    display: grid;
+    justify-content: center;
+}
+
+// Code blocks without any language should be treated as images
+pre:not([class^=language-]) {
+    padding: 0;
+
+    code {
+        line-height: 1.2;
+    }
+
+    code::before {
+        display: none;
+    }
+}
