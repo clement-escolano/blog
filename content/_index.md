@@ -4,7 +4,7 @@ sort_by = "date"
 template = "section.html"
 
 [extra]
-header = {title = "Hello! I'm Clément~", img = "img/avatar.webp", img_alt = "Clément Escolano" }
+header = {title = "Hello! I'm Clément~", img = "img/avatar.avif", img_alt = "Clément Escolano drawing" }
 section_path = "blog/_index.md"
 max_posts = 4
 +++
