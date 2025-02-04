@@ -1,7 +1,8 @@
 +++
-title = "Signal on Web"
+title = "Signal Web"
 description = "My journey to access Signal (the messaging platform) through the web with Matrix."
 date = 2025-02-01
+aliases = ["/blog/signal-on-web/"]
 
 [taxonomies]
 tags=["self-hosted", "privacy"]
@@ -20,7 +21,7 @@ Well, I understand the reasons behind their choice but a web version has a lot o
 * available even on restricted computers
 * no need to install an application
 
-For all these reasons, I stayed home on a sunny Sunday afternoon to set up my version of Signal on Web.
+For all these reasons, I stayed home on a sunny Sunday afternoon to set up my version of Signal Web.
 
 ## The objectives
 
