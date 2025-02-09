@@ -31,3 +31,9 @@ pre:not([class^=language-]) {
         display: none;
     }
 }
+
+
+// Fix cumulative layout shift while loading the image
+#banner-container-home #image-container-home {
+    width: 100%;
+}
