@@ -2,6 +2,7 @@
 title = "Signal Web"
 description = "My journey to access Signal (the messaging platform) through the web with Matrix."
 date = 2025-02-01
+updated = 2025-11-15
 aliases = ["/blog/signal-on-web/"]
 
 [taxonomies]
@@ -52,13 +53,16 @@ For the client, I went with the most popular one, [Element](https://element.io/)
 It supports most of the features and seems like a good fit.
 
 For the server, I went with [Dendrite](https://github.com/element-hq/dendrite) first as it was advertised as the "second-generation" server by the creator of Matrix with a lightweight footprint which was important to me as it would be installed on a RaspberryPi in my home with limited resources.
-The Signal Bridge does not support this home server however[^4], so I went with [Conduwuit](https://conduwuit.puppyirl.gay/) which seems to have the same purpose as dendrite but was recommended by the Signal bridge.
+The Signal Bridge does not support this home server however[^4], so I went with [Tuwunel](https://tuwunel.chat/)[^5] which seems to have the same purpose as dendrite.
 
-**Note**: If I add to start again, I would have gone with [Synapse](https://element-hq.github.io/synapse/latest/), the oldest and most complete server. Conduwuit is still missing some features[^5] and even though Synapse was fairly heavy to run at the beginning, it seems fairly light now and should run on my Raspberry Pi.
+**Note**: If I add to start again, I would have gone with [Synapse](https://element-hq.github.io/synapse/latest/), the oldest and most complete server. Tuwunel is still missing some features[^6] and even though Synapse was fairly heavy to run at the beginning, it seems fairly light now and should run on my Raspberry Pi.
 
 [^4]: Well, apparently it can as described in this [issue](https://github.com/mautrix/signal/issues/457), but I only found out when writing this article.
 
-[^5]: When a message is read on the Matrix client, the "read status" is not transmitted back to Signal so the message is still unread on the phone. [GitHub issue](https://github.com/girlbossceo/conduwuit/issues/584).
+[^5]: At the time of publication, I was using [Conduwuit](https://github.com/x86pup/conduwuit/), recommended by the Signal
+bridge, but it was discontinued. Tuwunel is the continuation of Conduwuit work. 
+
+[^6]: When a message is read on the Matrix client, the "read status" is not transmitted back to Signal so the message is still unread on the phone. [GitHub issue](https://github.com/girlbossceo/conduwuit/issues/584).
 
 ## Architecture
 
